@@ -1,0 +1,440 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+}
+#banner{
+    background: linear-gradient(rgba(0,0,0,0.5),#009688), url(img/Barber_Shop_img/banner.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+.logo{
+    width: 140px;
+    position: absolute;
+    top: 4%;
+    left: 10%;
+}
+.banner-text{
+    text-align: center;
+    color:#fff;
+    padding-top: 180px;
+}
+.banner-text h1{
+    font-size: 100px;
+    font-family: 'Fredoka One', cursive;
+}
+.banner-text p{
+    font-size: 20px;
+    /* font-style: italic; */
+    font-family: 'Pacifico', cursive;
+}
+.banner-btn{
+    margin-top: 70px;
+}
+.banner-btn a{
+    width: 270px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 10px;
+    padding: 12px 0;
+    color: #fff;
+    border: 0.5px solid #fff;
+    position: relative;
+    z-index: 1;
+}
+.banner-btn a span{
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #fff;
+    z-index: -1;
+    transition: 0.7s;
+}
+.banner-btn a:hover span{
+    width: 100%;
+}
+.banner-btn a:hover{
+    color: black;
+    transition: 0.5s;
+    font-weight: 700;
+}
+#sidenav{
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    right: -250px;
+    top: 0;
+    background: #009688;
+    z-index: 2;
+    transition: 1s;
+}
+nav ul li{
+    list-style-type: none;
+    position: relative;
+    margin: 50px 20px;
+
+}
+nav ul li a{
+    text-decoration: none;
+    position: relative;
+    color: #fff;
+    display:inline-block;
+}
+nav ul li a:hover{
+    font-size: 30px;
+}
+#menubtn{
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    right: 30px;
+    top: 20px;
+    border-radius: 3px;
+    cursor: pointer;
+    background: #009688;
+    z-index: 3;
+}
+#menubtn img{
+    width: 20px;
+    margin-top: 15px;
+}
+@media screen and (max-width: 770px) {
+    .banner-text h1{
+        font-size: 50px;
+    }
+    .banner-btn a{
+        width: 250px;
+        display: block;
+        margin: 20px auto;
+        text-align: center;
+    }
+}
+#feature{
+    padding: 70px 0;
+    /* border: 2px solid red; */
+    width: 100%;
+}
+.feature-text{
+    text-align: center;
+    /* border: 2px solid green; */
+}
+.feature-text p{
+    font-size: 20px;
+    color: #009688;
+    font-weight: bold;
+    position: relative;
+    display:inline-block;
+    z-index: 1;
+}
+.feature-text p::before{
+    /* p::before aur p::after boyh work as same why? */
+    content: '';
+    width: 50px;
+    height: 35px;
+    background: linear-gradient(#019587,#fff);
+    position: absolute;
+    top: -20px;
+    border-top-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+    transform: rotate(10deg);
+    left: 0;
+    z-index: -1;
+}
+.feature-text h1{
+    font-size: 50px;
+    font-family: sans-serif;
+    margin-bottom: 30px;
+}
+.feature-box{
+    display: flex;
+    width: 80%;
+    margin: auto;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+.features{
+    flex-basis: 50%;
+    /* text-align: left; */
+}
+.features h1{
+    text-align: left;
+    margin-bottom: 10px;
+    font-weight: 200;
+    color: #009688;
+}
+.features-desc{
+    display: flex;
+    align-items: center;
+    margin: 40px;
+}
+.features-icon .fa{
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    line-height: 50px;
+    border-radius: 8px;
+    color: #009688;
+    border: 1px solid #009688;
+}
+.features-text p{
+    text-align: initial;
+    padding: 0 20px;
+}
+.features-img{
+    flex-basis: 49%;
+    margin: auto;
+}
+.features-img img{
+    width: 70%;
+    border-radius: 10px;
+}
+@media screen and (max-width:1000px) {
+    .feature-text h1{
+        font-size: 35px;
+        font-family: sans-serif;
+    }
+    .feature-box{
+        justify-content: center;
+        width: 90%;
+    }
+    .features{
+        flex-basis: 100%;
+        /* text-align: left; */
+    }
+    .features-img{
+        flex-basis: 100%;
+        
+    }
+    .features-img img{
+        width: 85%;
+        border-radius: 10px;
+        margin-top: 30px;
+    }
+    .features-desc{
+        display: flex;
+        align-items: center;
+        margin: 10px;
+    }
+}
+
+/* -------Services------- */
+
+#services{
+    width: 100%;
+    padding: 70px 0;
+    /* border: 2px solid red; */
+    background:#efefef;
+}
+.service-box{
+    /* border: 2px solid palegreen; */
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: auto;
+}
+.single-service{
+    /* border: 2px solid green; */
+    flex-basis: 48%;
+    text-align: center;
+    border-radius: 7px;
+    margin-bottom: 20px;
+    color: white;
+    position: relative;
+}
+.single-service img{
+    width: 100%;
+    border-radius: 7px;
+}
+.overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    border-radius: 7px;
+    opacity: 0;
+    cursor: pointer;
+    background: linear-gradient(rgba(0,0,0,0.3), #009688);
+    transition: 1s;
+}
+.single-service:hover .overlay{
+    opacity: 1;
+}
+.service-desc{
+    /* border: 2px solid black; */
+    width: 80%;
+    position: absolute;
+    left: 9%;
+    bottom: 0%;
+    opacity: 0;
+    transition: 1s;
+}
+hr{
+    background: #fff;
+    height: 2px;
+    border: 0;
+    margin: 15px auto;
+    width: 60%;
+}
+.service-desc p{
+    font-size: 14px;
+}
+.single-service:hover .service-desc{
+    opacity: 1;
+    bottom: 40%;
+}
+@media screen and (max-width: 770px){
+    .single-service{
+        flex-basis: 100%;
+    }
+}
+
+
+/* ------testimonial */
+
+
+#testimonial{
+    padding: 70px 0;
+    width: 100%;
+}
+.testimonial-row{
+    /* border: 2px solid black; */
+    width: 80%;
+    margin: auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;  
+}
+.testimonial-col{
+    /* border: 2px solid rgb(245, 233, 105); */
+    flex-basis: 28%;
+    padding: 10px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    box-shadow: 0 10px 20px 3px #00968866;
+    transition: transform .5s;
+}
+.testimonial-col p{
+    font-size: 14px;
+    /* text-align: justify; */
+}
+.user{
+    /* border: 2px solid rgb(209, 193, 103); */
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+
+}
+.user img{
+    /* border: 2px solid gold; */
+    width: 40px;
+    margin-right: 20px;
+    border-radius: 3px;
+
+}
+/* .user-info{
+    border: 2px solid darkorange;
+} */
+.user-info .fa{
+    font-size: 20px;
+    color: #27c0ff;
+    margin-left: 10px;
+}
+.user-info small{
+    color: #009688;
+}
+.testimonial-col:hover{
+    transform: translateY(-7px);
+
+}
+@media screen and (max-width: 770px){
+    .testimonial-col{
+        /* border: 2px solid rgb(245, 233, 105); */
+        flex-basis: 100%;
+        margin: 15px 35px;
+    }  
+    
+}
+
+
+/* footer */
+#footer{
+    /* border: 3px solid gold; */
+    padding: 100px 0 20px;
+    background: #efefef;
+    position: relative;
+}
+.footer-row{
+    /* border: 3px solid darkblue; */
+    width: 85%;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.footer-row-left, .footer-row-right{
+    /* border: 3px solid lightcoral; */
+    flex-basis: 45%;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+.footer-row-right{
+    text-align: right;
+}
+.footer-row h1{
+    margin: 10px 0;
+}
+.footer-row p{
+    line-height: 35px;
+}
+.footer-row-left .fa, .footer-row-right .fa{
+    font-size: 20px;
+    color: #009688;
+    margin: 10px;
+}
+.footer-img{
+    max-width: 370px;
+    position: absolute;
+    opacity: 0.1;
+    left: 50%;
+    top: 35%;
+    transform: translate(-50%,-50%);
+}
+.social-link{
+    text-align: center;
+}
+.social-link .fa{
+    height: 40px;
+    width: 40px;
+    font-size: 20px;
+    line-height: 40px;
+    /* border: 1px solid #009688; */
+    margin: 40px 5px 0;
+    color: #009688;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.social-link .fa:hover{
+    background: #009688;
+    color: #fff;
+    transform: translateY(-7px);
+}
+.social-link p{
+    font-size: 12px;
+    margin-top: 20px;
+}
+@media screen and (max-width: 770px) {
+    .footer-row-left{
+        flex-basis: 85%;
+    }
+    .footer-row-right{
+        flex-basis: 85%;
+        text-align: left;
+    }
+}
